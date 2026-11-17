@@ -135,11 +135,9 @@ the player to spin again, and one slot ends the game immediately.
 **Wheel of Change slots:**
 
 - 4 Badge slots (1 each of Gold, Silver, Bronze, and Wood)
-- 1 Spin-Again slot
+- 2 Spin-Again slots
 - 1 Game Over slot
 - 1 Extra Life slot (allows the player to play again after a loss)
-
-[//]: # (TODO Decide whether the wheel has 7 slots or needs an 8th slot)
 
 **Best-Time addendum:**
 When a player beats their best time, the Wheel of Change appears immediately. The Game Over slot is
