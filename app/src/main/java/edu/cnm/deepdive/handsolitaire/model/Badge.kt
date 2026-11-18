@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.handsolitaire.model.entity
+package edu.cnm.deepdive.handsolitaire.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
