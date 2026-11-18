@@ -6,7 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import edu.cnm.deepdive.handsolitaire.model.Game
+import edu.cnm.deepdive.handsolitaire.model.entity.Game
 
 @Dao
 interface GameDao {

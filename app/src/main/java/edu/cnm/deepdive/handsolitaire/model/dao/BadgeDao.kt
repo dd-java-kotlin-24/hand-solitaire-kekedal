@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import edu.cnm.deepdive.handsolitaire.model.Badge
+import edu.cnm.deepdive.handsolitaire.model.entity.Badge
 
 @Dao
 interface BadgeDao {
