@@ -134,14 +134,14 @@ the player to spin again, and one slot ends the game immediately.
 
 **Wheel of Change slots:**
 
-- 4 Badge slots (1 each of Gold, Silver, Bronze, and Wood)
+- 5 Badge slots (1 each of Gold, Silver, Bronze, Wood and Lump o' Coal)
 - 2 Spin-Again slots
 - 1 Game Over slot
 - 1 Extra Life slot (allows the player to play again after a loss)
 
 **Best-Time addendum:**
 When a player beats their best time, the Wheel of Change appears immediately. The Game Over slot is
-replaced randomly by any of the other slot types, except Wood or Bronze.
+replaced randomly by any of the other slot types, except Wood or Lump o' Coal.
 
 **Picture Packages:**
 The player starts with a standard environment, which can be changed and personalized as the player
