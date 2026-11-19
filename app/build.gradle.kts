@@ -130,6 +130,7 @@ dependencies {
 
     // Room ORM library & annotation processor
     implementation(libs.room.runtime)
+    implementation(libs.databinding.adapters)
     ksp(libs.room.compiler)
 
     // Hilt dependency-injection library & annotation processor

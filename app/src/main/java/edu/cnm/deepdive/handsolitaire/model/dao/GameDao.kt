@@ -21,7 +21,7 @@ interface GameDao {
     suspend fun delete(game: Game): Int
 
     // Newest games first
-    @Query("SELECT * FROM game WHERE game_id = : gameId")
+    @Query("SELECT * FROM game WHERE game_id = :gameId")
     fun select(gameId: Long): LiveData<Game>
 
     // Best winning time (0 cards remaining, finished, lowest duration)
@@ -31,7 +31,7 @@ interface GameDao {
         ORDER BY duration ASC 
         LIMIT 1
     """)
-    fun selectBestWinningTime(): LiveData<Game?>?
+    fun selectBestWinningTime(): LiveData<Game?>
 
 
 }
