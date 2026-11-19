@@ -26,12 +26,19 @@ interface GameDao {
 
     // Best winning time (0 cards remaining, finished, lowest duration)
     @Query("""
-        SELECT * FROM game 
-        WHERE user_id = :userId AND finished = 1 AND cards_remaining = 0 
-        ORDER BY duration ASC 
+        SELECT
+          * 
+        FROM game 
+        WHERE
+          user_id = :userId
+          AND level = :level
+          AND finished = 1 
+          AND cards_remaining = 0 
+        ORDER BY 
+          duration ASC 
         LIMIT 1
     """)
-    fun selectBestWinningTime(): LiveData<Game?>
+    fun selectBestWinningTime(level: Int, userId: Long): LiveData<Game?>
 
 
 }

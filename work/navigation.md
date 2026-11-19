@@ -2,18 +2,18 @@
 
 ## Inventory
 
-| Fragment Class                                  | Title            | Layout / XML resource     | Top-level? |         Superclass         |
-|:------------------------------------------------|:-----------------|:--------------------------|:----------:|:--------------------------:|
-| `PreLoginFragment`*                             | (none)           | (none)                    |     No     |                            |
-| `LoginFragment`*                                | Sign In          | fragment_login            |     No     |                            |
-| `GameFragment`                                  | Play             | fragment_game             |    Yes     |                            |
-| `GameSummaryFragment(a DialogFragment) `        | Game Over        | (none)                    |     No     |       DialogFragment                     |
-| `HistoryFragment `                              | History          | (none)                    |    Yes     |                            |
-| `BadgesFragment`                                | Badges           | (none)                    |    Yes     |                            |
-| `ProfileFragment`                               | Profile          | fragment_profile          |     No     |                            |
-| `SettingsFragment (a PreferenceFragmentCompat)` | Settings         | XML                   |    Yes     | `PreferenceFragmentCompat` |
-| `WheelOfChangeFragment (a DialogFragment)`      | Wheel of Change  | fragment_wheel_of_change  |     No     |                            |
-| `PicturePackagesFragment`                       | Picture Packages | fragment_picture_packages | Yes or No  |                            |
+| Fragment Class                                                       | Title            | Layout / XML resource     | Top-level? |         Superclass         |
+|:---------------------------------------------------------------------|:-----------------|:--------------------------|:----------:|:--------------------------:|
+| `PreLoginFragment`*(not built in this phase)                         | (none)           | fragment_pre_login        |     No     |          Fragment          |
+| `LoginFragment`*(not built in this phase)                            | Sign In          | fragment_login            |     No     |          Fragment          |
+| `GameFragment`                                                       | Play             | fragment_game             |    Yes     |          Fragment          |
+| `GameSummaryFragment(a DialogFragment)`* (not built in this phase)   | Game Over        | (none)                    |     No     |          DialogFragment          |
+| `HistoryFragment`                                                   | History          | fragment_history          |    Yes     |          Fragment          |
+| `BadgesFragment`                                                     | Badges           | fragment_badges           |    Yes     |          Fragment          |
+| `ProfileFragment`                                                    | Profile          | fragment_profile          |    Yes     |          Fragment          |
+| `SettingsFragment (a PreferenceFragmentCompat)`                      | Settings         | preferences               |     No     | `PreferenceFragmentCompat` |
+| `WheelOfChangeFragment (a DialogFragment)`*(not built in this phase) | Wheel of Change  | fragment_wheel_of_change  |     No     |          DialogFragment          |
+| `PicturePackagesFragment`*(not built in this phase)                  | Picture Packages | fragment_picture_packages |     No     |          Fragment          |
 
 ## Organization
 
@@ -40,9 +40,9 @@
 
 - Navigation action and state changes will use the Jetpack navigation component, with an
   `AppBarConfiguration` tied to a `NavController`, and the `NavController` tied to a
-  `NavigationView`. (non-tabbed)
+  `BottomNavigationView`. (non-tabbed)
 
-- Navigation action and display changes will use th `ViewPager2` component, driven by a
+- Navigation action and display changes will use the `BottomNavigationView` component, driven by a
   `PrimaryTabRow` a `FragmentStateAdapter` subclass.
 
 ## General
@@ -50,4 +50,6 @@
 - View binding will be used in all Fragment subclasses (other than `PreferenceFragmentCompat`.
   subclasses).
 
-- All view binding instance reference properties should be named `binding`. In Kotlin fragments, this should be a `lateinit var` property; in Kotlin activities, this should be declared as a `val`property, initialized `by lazy`.
+- All view binding instance reference properties should be named `binding`. In Kotlin fragments,
+  this should be a `lateinit var` property; in Kotlin activities, this should be declared as a `val`
+  property, initialized `by lazy`.

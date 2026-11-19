@@ -18,7 +18,8 @@ import java.time.Instant
         )
     ],
     indices = [
-        Index(value = ["user_id"])
+        Index(value = ["user_id"]),
+        Index(value = ["user_id","level"])
     ]
 )
 data class Game(
@@ -32,12 +33,12 @@ data class Game(
     @ColumnInfo(name = "cards_remaining")
     val cardsRemaining: Int,
 
-    @ColumnInfo(name = "finished")
     val finished: Boolean,
 
     @ColumnInfo(name = "started_at")
     val startedAt: Instant,
 
-    @ColumnInfo(name = "duration")
-    val duration: Long
+    val duration: Long,
+
+    val level: Int
 )
